@@ -2,7 +2,6 @@ package edu.pingpong.admin;
 
 import edu.pingpong.filter.Filter;
 import edu.pingpong.target.Target;
-
 public class Programmer {
     private Duties duties = null;
 

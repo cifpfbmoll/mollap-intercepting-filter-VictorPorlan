@@ -16,7 +16,11 @@ public class Duties {
     public List<Filter> getFilters() {
         return filters;
     }
-/*No creo un getTargets porque no me deja usarlo aqui, asi que es inutil*/
+
+    public Optional<Target> getTargets() {
+        return targets;
+    }
+
     public void setTarget(Target target){
         this.targets = Optional.ofNullable(target);
     }
@@ -25,9 +29,17 @@ public class Duties {
         getFilters().add(filter);
     }
 
-    public String executeDuties(String id){
-        System.out.println("Probando");
-        return "Hola";
+    public void executeDuties(String id){
+        for (int i = 0; i < filters.size(); i++){
+            getFilters().get(i).execute(id);
+        };
+        if(getTargets().isPresent()){
+            getTargets().get().execute(id);
+        }
+        else{
+            System.out.println("No target avalible");
+        }
+
     }
 
 }
