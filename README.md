@@ -1,14 +1,2 @@
-# Autograding Example: Java
-This example project is written in Java, and tested with Gradle/JUnit.
-
-### The assignment
-The tests are currently failing because of an output mismatch. Fixing the `System.out.println` in the main method will make the tests green.
-
-### Setup command
-N/A
-
-### Run command
-`gradle test`
-
-### Notes
-- The JDK is installed on GitHub Actions machines, so you're also able to directly invoke `javac`, `java`, or any other CLI command included in the JDK. 
+# Molapp intercepting filter
+En este kata de programación de Java aprendemos a usar el patrón de diseño intercepting filter, con el cual aprendemos a manejar las diferentes tareas que nos proponen en el kata, separando cada una de las partes que supone manejar las tareas en diferentes módulos. Un administrador de tareas tiene una lista de tareas, en un módulo a parte, y cada una de ellas puede ser o administrar la autenticación y autorización de un usuario, o abrir y cerrar las puertas del coche que está solicitando.
